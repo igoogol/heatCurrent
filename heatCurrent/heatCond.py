@@ -23,7 +23,7 @@ NE = 2000      # number of energy points
 Ueq = 0.0      # equilibrium potential
  
 # Energy grid
-FermiEnergy = sp.linspace(-20,20,200)
+FermiEnergy = sp.linspace(-20,20,20)
 Gh = []
 for Ef in FermiEnergy: 
     Emin = -20
