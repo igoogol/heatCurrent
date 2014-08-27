@@ -1,6 +1,7 @@
 '''
 Created on Aug 27, 2014
 This code is used to calculate the heat conductance.
+Plot: Gh v.s Ef
 
 @author: googol
 '''
