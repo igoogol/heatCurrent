@@ -58,7 +58,7 @@ for Ef in FermiEnergy:
         gh2_12[ii] = 1/Omega*(Omega/2.0)*g2_12[ii]  
     Gh1 = -(dE/(2.0*sp.pi))*sp.sum(gh1_12)
     Gh2 = +(dE/(2.0*sp.pi))*sp.sum(gh2_12)
-    Gh.append(Gh1)
+    Gh.append(Gh1+Gh2)
     
 # print Gh
 
