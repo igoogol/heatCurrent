@@ -28,7 +28,7 @@ Ueq = 0.0       # equilibrium potential
 # Energy grid
 #FermiEnergy = sp.linspace(-10,10,200)
 # Frequency grid
-Frequency = sp.linspace(0.0001,50,200)
+Frequency = sp.linspace(0.0001,40,200)
 Gh = []
 for Omega in Frequency: 
     realGh = Gamma1*Gamma2/(8*sp.pi*Gamma*Omega)*(8*Omega*sp.arctan(2*(Ef-E0)/Gamma) \
@@ -44,7 +44,9 @@ for Omega in Frequency:
                                                    - (Ef-E0+Omega)*sp.log(4*(Ef-E0+Omega)**2 + Gamma**2 ) )
     Gh.append(realGh + imagGh*1j )
     
-# print Gh
+# save data
+np.save("Gh-Omega.npy",Gh)
+np.save("Omega.npy",Frequency)
 
 plt.plot(Frequency,sp.real(Gh),label='real',color='blue')
 plt.plot(Frequency,sp.imag(Gh),label='imag',color='red')  
